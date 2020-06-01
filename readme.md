@@ -37,3 +37,14 @@ For skip-gram architecture we need to grab some words surrounding the selected w
 
 ## Embedding Validation
 We know that the value of cosine is from 0 degree to 90 degree is from 0 to 1 and our embedding layer basically outputs vector representation between words if we need to validate this we just need to find the angle between two vectors by taking a vector dot product between them and then plugging this angle to the cosine.
+
+# Negative Sampling
+
+In the previous [notebook](https://github.com/abhijitramesh/EmbeddingsandWord2Vec/blob/master/Skip_Grams.ipynb) We use softmax function on the outputs of the fully connected layer and then use this to change the weights which means we are only making a very small change to millions of weights even though there is only one true example. This can be avoided by using Negative Sampling.
+
+To achieve negative sampling we need to do two things one we need two embedding layers 1 to map the input words to hidden layer and another to map hidden layer to output words.
+
+The second modification is in the loss function.
+
+<img src="https://render.githubusercontent.com/render/math?math=-\large\log{\sigma\left(u_{w_O}\hspace{0.001em}^\top v_{w_I}\right)} -
+\sum_i^N \mathbb{E}_{w_i \sim P_n(w)}\log{\sigma\left(-u_{w_i}\hspace{0.001em}^\top v_{w_I}\right)}">
