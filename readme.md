@@ -25,3 +25,9 @@ def create_lookup_tables(words):
 
 This function returns two dictionaries one which maps the words to integers and the other which maps the integer to words.
 
+## Subsampling
+There might be some noise in the data words like the/or may not provide much context about the surrounding words and hence we can remove this by a process called subsampling. The formula representing subsampling is given by:
+
+<img src="https://render.githubusercontent.com/render/math?math=P(W_i) = 1 - \sqrt{\frac{t}{f(w_i)}}">
+
+Where t is the threshold we set and w_i is the words for which we are calculating the probability if it should be removed or not. f(wi) is the frequency that the words appears in the dataset.
