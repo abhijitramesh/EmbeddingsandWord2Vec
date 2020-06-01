@@ -9,3 +9,19 @@ If we look at a Rnn which uses text input probably they have a one-hot encoded v
 
 # Skip gram Work2Vec
 As we have said earlier it is very compute intensive to use the one-hot encoded vector at every step so what we can do is instead use an embedding layer to skip the unnecessary multiplication step.
+
+[Click here](https://github.com/abhijitramesh/EmbeddingsandWord2Vec/blob/master/Skip_Grams.ipynb) to see the implementation of Skip Gram Word to vec
+
+#### [Utils.py](https://github.com/abhijitramesh/EmbeddingsandWord2Vec/blob/master/utils.py)
+This file contains two functions:
+ ```python
+def preprocess(text):
+```
+This function is used to mainly to tokenize the data initially everything is made to small letters and the symbols are replaced with appropriate tokens. Then a counter is initialized to get the frequency of words and if the words occurs less than 5 times it is discarded this improves the performance of the neural net.
+
+```python
+def create_lookup_tables(words):
+```
+
+This function returns two dictionaries one which maps the words to integers and the other which maps the integer to words.
+
