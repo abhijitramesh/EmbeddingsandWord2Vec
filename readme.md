@@ -31,3 +31,9 @@ There might be some noise in the data words like the/or may not provide much con
 <img src="https://render.githubusercontent.com/render/math?math=P(W_i) = 1 - \sqrt{\frac{t}{f(w_i)}}">
 
 Where t is the threshold we set and w_i is the words for which we are calculating the probability if it should be removed or not. f(wi) is the frequency that the words appears in the dataset.
+
+## Batches 
+For skip-gram architecture we need to grab some words surrounding the selected words this is more like selecting a window of words.
+
+## Embedding Validation
+We know that the value of cosine is from 0 degree to 90 degree is from 0 to 1 and our embedding layer basically outputs vector representation between words if we need to validate this we just need to find the angle between two vectors by taking a vector dot product between them and then plugging this angle to the cosine.
