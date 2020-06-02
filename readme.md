@@ -48,3 +48,5 @@ The second modification is in the loss function.
 
 <img src="https://render.githubusercontent.com/render/math?math=-\large\log{\sigma\left(u_{w_O}\hspace{0.001em}^\top v_{w_I}\right)} -
 \sum_i^N \mathbb{E}_{w_i \sim P_n(w)}\log{\sigma\left(-u_{w_i}\hspace{0.001em}^\top v_{w_I}\right)}">
+
+[click here](https://github.com/abhijitramesh/EmbeddingsandWord2Vec/blob/master/Negative_Sampling.ipynb) to see how this is implemented in the same dataset.
